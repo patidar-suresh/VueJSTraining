@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HelloVue</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    {{ message }}
+    <br>
+    <img :src="imageSrc" v-bind:alt="altText" :[attrname]="attrValue">
+  </div>
+<script>
+  var app = new Vue({
+    el: '#app',    
+    data: {
+      message: "Hello World!",
+      imageSrc: "https://vuejs.org/images/logo.png",
+      attrname: "title",
+      attrValue: "Vue.js official logo",
+      altText: "Vue.JS"
+    }
+  })
+</script>
+</body>
+</html>
