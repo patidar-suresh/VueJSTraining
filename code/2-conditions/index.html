@@ -20,16 +20,12 @@
       <label for="email">Email</label>
       <input type="text" placeholder="Enter email address" name="email" id="email" key="email">
     </template>
-    <ul>
-      <li v-for="(fruit, index) in fruits">{{ index + 1 }} - {{ fruit }}</li>
-    </ul>
   </div>
   <script>
     var app = new Vue({
       el: '#app',
       data: {
-        show: "",
-        fruits:["Apple", "Mango", "Orange", "Grapes"]
+        show: ""
       }
     })
   </script>
