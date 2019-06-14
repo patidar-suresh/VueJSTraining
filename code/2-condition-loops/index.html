@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HelloVue</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <h1 v-if="show == 'welcome'">Welcome</h1>
+    <template v-else-if="show == 'username'">
+      <label for="username">User Name</label>
+      <input type="text" placeholder="Enter user name" name="username" id="username" key="username" >
+    </template>
+    <template v-else>
+      <label for="email">Email</label>
+      <input type="text" placeholder="Enter email address" name="email" id="email" key="email">
+    </template>
+    <ul>
+      <li v-for="(fruit, index) in fruits">{{ index + 1 }} - {{ fruit }}</li>
+    </ul>
+  </div>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        show: "",
+        fruits:["Apple", "Mango", "Orange", "Grapes"]
+      }
+    })
+  </script>
+</body>
+
+</html>
